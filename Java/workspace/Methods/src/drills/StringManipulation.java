@@ -11,10 +11,14 @@ public class StringManipulation {
 		System.out.print("Enter a number: ");
 		int num = scanner.nextInt();
 		
+		String returnedValue = addCharacter(phrase,num);
+		System.out.println(returnedValue);
+		
 		// 2. Call addCharacter, passing phrase and num, and assign its return
 		// value to a local variable.
 		
 		// 3. Output the value of the local variable.
+		scanner.close();
 	}
 	
 	/*
@@ -27,9 +31,17 @@ public class StringManipulation {
 	public static String addCharacter(String input, int numExc) {
 		// 1. Declare a local variable "output". Initialize it to the parameter input..
 		// Using a loop, concatenate _numExc_ "!" characters to  the local variable output.
+		String output = input;
+		
+		int count = 0;
+		while(count < numExc) {
+			output = output + "!";
+			count ++;
+		}
+		
 		
 		// return "output" instead of "input"
-		return input;
+		return output;
 	}
 
 }
