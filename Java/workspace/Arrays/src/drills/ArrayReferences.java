@@ -5,6 +5,7 @@ public class ArrayReferences {
   public static void main(String[] args) {
     String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     // Print the array
+    
     for (int i = 0; i < daysOfWeek.length; i++) {
       System.out.print(daysOfWeek[i]);
       if(i != daysOfWeek.length - 1) { // don't do this for the last index
@@ -29,11 +30,12 @@ public class ArrayReferences {
   
   }
   
-  public static void changeArray(String[] inputArr) {
+  public static void changeArray(String inputArr[]) {
+	  inputArr[3] = "HUMPDAY";
+	  inputArr[5] = "Viernes";
     // * Change Wednesday to "HUMPDAY" and Friday to "Viernes".
     // * (There is no need to iterate, just change the right index.)
-    
-    
+	  
     // * Reassign inputArr to a new array containing the values
     // * "Su", "M", "T", "W", "Th", "F", "Sa"
     
