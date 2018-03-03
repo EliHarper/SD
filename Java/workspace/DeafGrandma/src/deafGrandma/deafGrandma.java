@@ -14,11 +14,13 @@ public class deafGrandma {
 		if (say.equals("GOODBYE")) {
 			System.out.println("SMELL YA LATER!");
 		}
+		else if (say.equals("WHERE'S GRANDPA")) {
+			System.out.println("WHO?!");
+		}
 		else if (say.equals(say.toUpperCase())) {
 			System.out.println("NO, NOT SINCE THE WAR");
 			response();
 		}
-		
 		else {
 			System.out.println("HUH? SPEAK UP, BILLY!!");
 			response();

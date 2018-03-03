@@ -6,6 +6,7 @@ public class CharPrinting {
     char variable = 'A';
     System.out.println(variable);
     // Add the line System.out.println(variable + 1); to main(). 
+    System.out.println(variable +1);
     // What is the output?
     // What does the + operator appear to do - i.e. what the + operator's output?
   

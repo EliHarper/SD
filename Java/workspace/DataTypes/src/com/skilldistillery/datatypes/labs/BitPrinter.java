@@ -1,5 +1,7 @@
 package com.skilldistillery.datatypes.labs;
 
+import com.skilldistillery.datatypes.solutions.BitPrinterDriver;
+
 public class BitPrinter {
   public static void main(String[] args) {
     

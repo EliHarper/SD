@@ -6,6 +6,7 @@ public class Promotion {
     // Try changing the types of the variables resultIF, resultID, and resultCI 
     // to the smaller or less-precise type, e.g. int resultIF. 
     // What compiler errors do you see?
+	
     int i    = 0;
     float f  = 1.0f;
 
