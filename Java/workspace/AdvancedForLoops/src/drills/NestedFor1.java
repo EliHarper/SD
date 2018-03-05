@@ -14,6 +14,7 @@ public class NestedFor1 {
     }
     // Run the above code.
     // How many times does the the second output statement execute?
+    // 10
   }
 
 }
