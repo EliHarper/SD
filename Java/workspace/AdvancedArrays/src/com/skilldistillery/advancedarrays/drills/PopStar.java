@@ -1,8 +1,8 @@
 package com.skilldistillery.advancedarrays.drills;
 
 public class PopStar {
-	public String name;
-
+	String name;
+	//^ name is a field
 	public static void main(String[] args) {
 		
 	}
