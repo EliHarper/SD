@@ -17,22 +17,22 @@ public class StringPoolTesting {
     String coding2 = new String("AlwaysCoding");
     String always = "Always";
     
+    // true or false: it's false.
+ System.out.println( coding == coding2 );
+    // true or false: true!
+ 	System.out.println( coding == this.coding );
     // true or false:
-//  System.out.println( coding == coding2 );
+    System.out.println( coding == OtherClass.coding );
     // true or false:
-//  System.out.println( coding == this.coding );
+    System.out.println( coding == "AlwaysCoding" );
     // true or false:
-//    System.out.println( coding == OtherClass.coding );
+    System.out.println( coding == "Always" + "Coding" );
     // true or false:
-//    System.out.println( coding == "AlwaysCoding" );
+    System.out.println( coding == always + "Coding" );
     // true or false:
-//    System.out.println( coding == "Always" + "Coding" );
+    System.out.println( coding == "Al" + "waysCoding" );
     // true or false:
-//    System.out.println( coding == always + "Coding" );
-    // true or false:
-//    System.out.println( coding == "Al" + "waysCoding" );
-    // true or false:
-//    System.out.println( coding == (always + "Coding").intern() );
+    System.out.println( coding == (always + "Coding").intern() );
     
   }
 

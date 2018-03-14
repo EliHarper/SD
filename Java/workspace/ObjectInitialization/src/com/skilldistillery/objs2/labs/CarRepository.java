@@ -11,7 +11,8 @@ public class CarRepository {
   }
   public void addCar(Car c) {
     cars[numCars] = c;
-    numCars++;    // increment to reflect that we have one more car
+    numCars++;    
+    // increment to reflect that we have one more car
   }
   
   public Car[] getCars() {

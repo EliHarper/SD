@@ -10,7 +10,10 @@ public class StringBuilderLab {
   private void go() {
     String original = "Java world.";
     StringBuilder sb = new StringBuilder(original);
+    sb.replace(0, original.length(), "Hello, Java coding world! Always Be Coding!");
     System.out.println(sb);
+    
+    
     
     // Use only StringBuilder methods on sb to change the text to:
     // Hello, Java coding world! Always Be Coding!

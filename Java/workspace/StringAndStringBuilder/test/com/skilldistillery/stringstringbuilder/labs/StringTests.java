@@ -45,62 +45,80 @@ public class StringTests {
   
   @Test
   public void test_charAt_4_returns_character_o() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertEquals('o', s.charAt(4));
   }
   
   @Test
   public void test_endsWith_d_exclamation_returns_true() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertTrue(s.endsWith("d!"));
   }
 
   @Test
   public void test_endsWith_d_returns_false() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertFalse(s.endsWith("d"));
   }
   
   @Test
   public void test_indexOf_World_returns_6() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertEquals(6, s.indexOf("World"));
   }
   
   @Test
   public void test_indexOf_Planet_returns_minus_1() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertEquals(-1, s.indexOf("Planet"));
+	  
   }
   
   @Test
-  public void test_lastIndexOf_l_returns_10() {
-    fail("not implemented");
+  public void test_lastIndexOf_l_returns_9() {
+//    fail("not implemented");
+	  assertEquals(9, s.lastIndexOf("l"));
   }
   
   @Test
   public void test_isEmpty_returns_false() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertFalse(s.isEmpty());
   }
   
   @Test
   public void test_replace_World_Planet_returns_HelloPlanetbang_and_leaves_original_string_unchanged() {
-    fail("not implemented");
+//    fail("not implemented");
+	  String newStr = s.replaceFirst("World", "Planet");
+	  assertEquals("Hello Planet!", newStr);
+	  assertEquals("Hello World!", s);
   }
   
   @Test
   public void test_concat_Planet_returns_HelloWorldbangPlanet_and_leaves_original_string_unchanged() {
-    fail("not implemented");
+//    fail("not implemented");
+	  String newStr = s.concat("Planet");
+	  assertEquals("Hello World!Planet", newStr);
+	  assertEquals("Hello World!", s);
+	  
   }
   
   @Test
   public void test_substring_first_index_inclusive_and_second_index_exclusive_and_leaves_original_string_unchanged() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertEquals("Wor", s.substring(6, 9));
   }
   
   @Test
   public void test_substring_with_first_index_returns_to_end_of_string_and_leaves_original_string_unchanged() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertEquals("ello World!", s.substring(1, s.length()));
   }
   
   @Test
   public void test_trim_strips_all_leading_and_trailing_spaces_leaving_internal_spaces_and_leaves_original_string_unchanged() {
-    fail("not implemented");
+//    fail("not implemented");
+	  assertEquals("Hello World!", s.trim());
   }
   
 }

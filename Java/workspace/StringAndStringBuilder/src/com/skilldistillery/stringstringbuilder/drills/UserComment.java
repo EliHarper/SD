@@ -1,7 +1,8 @@
 package com.skilldistillery.stringstringbuilder.drills;
 
 public class UserComment {
-  private int commentId;
+
+private int commentId;
   private UserComment inReplyToComment;
   private String date;
   private String time;
@@ -58,9 +59,27 @@ public class UserComment {
   public void setCommentText(String commentText) {
     this.commentText = commentText;
   }
+  
+  public String toString() {
+	  StringBuilder builder = new StringBuilder();
+	  builder.append("On ");
+	  builder.append(date);
+	  builder.append(" at ");
+	  builder.append(time);
+	  builder.append(" ");
+	  builder.append(userName);
+	  builder.append(" posted this comment: [");
+	  builder.append(commentText);
+	  builder.append("]");
+	  return builder.toString();
+  }
 
   public int getCommentId() {
     return commentId;
   }
+  
+//  On 2018-01-04 at 14:59:23, bdobbs posted this comment: [I love coding in Java!]
+
+
 
 }

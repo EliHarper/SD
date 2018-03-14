@@ -13,6 +13,11 @@ public class SSNMasker {
   public String maskSSN(String ssn) {
     String maskedSSN = null;
     
+    String[] ssnArray = ssn.split("-");
+    
+    maskedSSN = ("XXX-XX-") + ssnArray[2];
+    
+    //maskedSSN = ssn.substring(7);
     // CODE HERE
     // use substring and concatenation to return a masked SSN.
     
