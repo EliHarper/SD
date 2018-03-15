@@ -13,35 +13,40 @@ import com.skilldistillery.regex.solutions.Pet;
 
 public class AddressParser {
 
-  public static void main(String[] args) {
-    AddressParser ap = new AddressParser();
-    ap.listZipsAndAreaCodes("addresses.txt");
-  }
+	public static void main(String[] args) {
+		AddressParser ap = new AddressParser();
+		ap.listZipsAndAreaCodes("addresses.txt");
+	}
 
-  private void listZipsAndAreaCodes(String fileName) {
-    // 13002 N Pennsylvania Avenue, Oklahoma City, OK 73120 <br />405-936-4264
-    // 999 E. Basse Rd. San Antonio, TX 78209 <br />(210) 824-1603
-    String regex = "\\b[A-Z]{2}\\b\\s+\\d{5}.*?/>\\s*\\(?\\d{3}\\b";
-    Pattern p = Pattern.compile(regex);
-    Matcher m = p.matcher("");
-    try {
-      BufferedReader br = new BufferedReader(new FileReader(fileName));
-      String line = null;
-      while ((line = br.readLine()) != null) {
-        m.reset(line);
-        
-        // See if the regex matches the line.
-        
-        // If so, print the line
-        
-      }
-      br.close();
-    }
-    catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
-    catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+	private void listZipsAndAreaCodes(String fileName) {
+		// 13002 N Pennsylvania Avenue, Oklahoma City, OK 73120 <br />405-936-4264
+		// 999 E. Basse Rd. San Antonio, TX 78209 <br />(210) 824-1603
+		String regex = "\\b[A-Z]{2}\\b\\s+(\\d{5}).*?/>\\s*\\(?(\\d{3})\\b";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher("");
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(fileName));
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				m.reset(line);
+//				if (m.find()) {
+//					System.out.println(line);
+//					System.out.println(m.replaceAll("###"));
+				if (m.find()) {
+					System.out.println("ZIP: " + m.group(1) + " Area Code:" + m.group(2));
+				}
+				}
+
+				// See if the regex matches the line.
+
+				// If so, print the line
+
+			
+			br.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

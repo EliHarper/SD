@@ -41,8 +41,6 @@ public class MapCollectionExample {
 			e.printStackTrace();
 		}
 		
-		
-
 		System.out.println(letterToManyNames);
 	}
 
