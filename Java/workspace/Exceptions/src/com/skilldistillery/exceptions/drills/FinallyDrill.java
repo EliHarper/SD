@@ -9,7 +9,17 @@ public class FinallyDrill {
   }
 
   private void launch() {
-    runMethod();
+	  try {
+		  runMethod();
+	  }
+	  catch (Exception e) {
+		  System.err.println("launch() caught exception");
+//		  return;
+	  }
+	  finally {
+		  System.err.println("launch() caught in finally.");
+//		  return;
+	  }
   }
 
   private void runMethod() {

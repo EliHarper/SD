@@ -1,6 +1,6 @@
 package com.skilldistillery.sorting.drills;
 
-public class Planet {
+public class Planet implements Comparable <Planet>{
   private String name;
   private long orbit;
   private int diameter;
@@ -59,4 +59,19 @@ public class Planet {
       return false;
     return true;
   }
+
+@Override
+public int compareTo(Planet o) {
+	if (this.orbit > o.orbit) {
+		return 1;
+	}
+	
+	else if (this.orbit < o.orbit) {
+		return -1;
+	}
+	
+	else {
+		return 0;
+	}
+}
 }

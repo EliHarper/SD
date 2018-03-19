@@ -10,9 +10,13 @@ public class ErrorDrill {
 
   private void callMe() {
     // 1. Increment callCount
+	  callCount++;
     // 2. Print out callCount
+	  System.out.println(callCount);
     // 3. Call callMe()
+	  callMe();	//Recursion
     // 4. Print "callMe finished."
+	  System.out.println("callMe finished.");
   }
 
 }

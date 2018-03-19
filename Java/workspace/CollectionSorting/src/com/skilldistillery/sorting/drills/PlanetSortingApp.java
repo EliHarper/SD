@@ -1,10 +1,12 @@
 package com.skilldistillery.sorting.drills;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
-public class PlanetSortingApp {
+public class PlanetSortingApp implements Comparator<Planet> {
 
   public static void main(String[] args) {
     PlanetSortingApp app = new PlanetSortingApp();
@@ -12,7 +14,7 @@ public class PlanetSortingApp {
   }
 
   private void launch() {
-    Set<Planet> planets = new HashSet<>();
+    List<Planet> planets = new ArrayList<Planet>();
     
     planets.add(new Planet("Earth", 149_600_000, 12_756));
     planets.add(new Planet("Jupiter", 778_330_000, 142_984));
@@ -23,13 +25,28 @@ public class PlanetSortingApp {
     planets.add(new Planet("Uranus", 2_870_990_000L, 51_118));
     planets.add(new Planet("Venus", 108_200_000, 12_103));
     
+//    PlanetReverseOrderComparator proc = new PlanetReverseOrderComparator();
+//    Collections.sort(planets, proc);
+//    planets.sort(proc);
+    Collections.sort(planets);
+    
     printPlanets(planets);
+    
   }
   
   private void printPlanets(Collection<Planet> planets) {
-    for (Planet planet : planets) {
+	 
+//	  System.out.println("Planets listed in reverse order using a comparator: \n");
+    System.out.println("Planets liseted after sorting itself using Collections.sort;");
+	  for (Planet planet : planets) {
       System.out.println(planet);
     }
   }
+
+@Override
+public int compare(Planet o1, Planet o2) {
+	// TODO Auto-generated method stub
+	return 0;
+}
 
 }

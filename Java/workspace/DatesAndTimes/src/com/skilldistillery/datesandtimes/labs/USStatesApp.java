@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,6 +29,7 @@ public class USStatesApp {
      Map<String, USState> states = new HashMap<>(67);
 
     try {
+    		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMM d yyyy");
       BufferedReader br = new BufferedReader(new FileReader(fileName));
       String record = null;
       while ((record = br.readLine()) != null) {
@@ -34,8 +37,9 @@ public class USStatesApp {
         String abbr = fields[0];
         String name = fields[1];
         String capital = fields[2];
-        String admitDate = fields[3];
+        String admitDat = fields[3];
         int population = Integer.parseInt(fields[4]);
+        LocalDate admitDate = LocalDate.parse(admitDat, dtf);
 
         USState state = new USState(abbr, name, capital, admitDate, population);
         states.put(abbr, state);
