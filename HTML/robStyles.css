@@ -1,0 +1,89 @@
+ul > li {
+  list-style: none;
+  float:left;
+}
+ul > li:hover {
+  background-color: white;
+  color:black;
+}
+
+li > ol > li {
+  display: none;
+}
+li > ol > li:hover {
+  display: block;
+}
+div#div1 {
+  background-color: cyan;
+  width: 30%;
+  float:left;
+}
+div#div2 {
+  position:relative;
+  background-color: lightgreen;
+  width:60%;
+  /* left: 10px;
+  top: 10px;
+  right: -50px; */
+}
+div#stuff {
+  background-color: white;
+  position: absolute;
+}
+div > h5 {
+  background-color: darkgrey;
+  color: white;
+}
+.clear {
+  clear: both;
+}
+
+
+
+*{background-color: lightgrey;}
+[alt] {
+  border: 1px solid orange;
+}
+[alt="Java Duke"] {
+  padding: 8px;
+  margin: 12px;
+  width: 200px;
+  border: 1px solid orange;
+}
+
+
+
+li > ol > li:nth-child(2)::after {
+  content: "Hello";
+  color: fuchsia;
+  background-color: limegreen;
+}
+ul > li {
+  color: limegreen;
+  background-color: fuchsia;
+}
+h1, h2, h3 {
+  text-decoration: underline;
+  font-family:"Comic Sans", fantasy;
+  color: magenta;
+  background-color: yellow;
+}
+p {
+  color: navy;
+  background-color: lightgrey;
+}
+
+.cool {
+  font-weight: bolder;
+  font-style: italic;
+  display: inline;
+  visibility: visible;
+}
+
+h1 {
+  color:red;
+}
+h1#xyz {
+  font-size: 40pt;
+  color: #29c2d4;
+}

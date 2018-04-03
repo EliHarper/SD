@@ -1,0 +1,26 @@
+
+div#div1{
+  background-color: cyan;
+}
+div#div2{
+  position: absolute;
+  background-color: lightgreen;
+}
+div#dogTable{
+  position: absolute;
+}
+
+h1, h2, h3{=
+  color: navy;
+  background-color: lightgrey;
+}
+
+body{
+  background-color: lightblue;
+}
+
+table{=
+  color: red;
+  font-variant: small-caps;
+  background-color: gold;
+}

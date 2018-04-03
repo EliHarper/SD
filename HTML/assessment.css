@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, h6{
+  color: powderblue;
+  font-family: sans-serif;
+}
+
+#scoreBoard thead{
+  font-weight: bold;
+  color: orange;
+}
+
+#scoreBoard{
+  border: solid black 5px;
+  text-align: center;
+}
+
+#teamRoster{
+  list-style-type: square;
+}
+
+a:hover{
+  color: darkgreen;
+  background-color: silver;
+  text-decoration: none;
+}
+
+blockquote{
+  background-color: black;
+  display: table;
+  color: white;
+}
+
+#teamRoster>li>img{
+  position: absolute;
+  padding-top: 50px;
+  padding-left: 50px;
+  z-index: -1;
+  opacity: .4;
+}
+
+img{
+  
+}
+
+#checkbox-grid{
+  list-style-type: none;
+}
