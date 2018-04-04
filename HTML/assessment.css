@@ -1,5 +1,10 @@
+body{
+  color: midnightblue;
+  background-color: azure;
+}
+
 h1, h2, h3, h4, h5, h6{
-  color: powderblue;
+  color: darkgrey;
   font-family: sans-serif;
 }
 
@@ -18,7 +23,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 a:hover{
-  color: darkgreen;
+  color: midnightblue;
   background-color: silver;
   text-decoration: none;
 }
@@ -34,11 +39,10 @@ blockquote{
   padding-top: 50px;
   padding-left: 50px;
   z-index: -1;
-  opacity: .4;
+  opacity: .3;
 }
 
 img{
-  
 }
 
 #checkbox-grid{
