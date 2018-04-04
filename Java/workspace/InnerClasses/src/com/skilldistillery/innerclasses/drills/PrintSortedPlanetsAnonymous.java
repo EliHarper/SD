@@ -9,7 +9,17 @@ public class PrintSortedPlanetsAnonymous {
   public void printPlanets() {
     // Change this class to pass an anonymous Comparator<Planet>
     // instead of a member class.
-    Set<Planet> planets = new TreeSet<>(new PlanetComparator());
+    Set<Planet> planets = new TreeSet<>(new Comparator <Planet>() {
+	    	
+    	   public int compare(Planet a, Planet b) {
+    		      if (a.getDiameter() < b.getDiameter())
+    		        return -1;
+    		      else if (a.getDiameter() > b.getDiameter())
+    		        return 1;
+    		      else
+    		        return a.getName().compareTo(b.getName());
+    		    }
+    });
 
     planets.add(new Planet("Mercury", 57_910_000, 4_880));
     planets.add(new Planet("Venus", 108_200_000, 12_103));
@@ -25,16 +35,16 @@ public class PrintSortedPlanetsAnonymous {
     }
   }
 
-  private class PlanetComparator implements Comparator<Planet> {
-    public int compare(Planet a, Planet b) {
-      if (a.getDiameter() < b.getDiameter())
-        return -1;
-      else if (a.getDiameter() > b.getDiameter())
-        return 1;
-      else
-        return a.getName().compareTo(b.getName());
-    }
-  }
+//  private class PlanetComparator implements Comparator<Planet> {
+//    public int compare(Planet a, Planet b) {
+//      if (a.getDiameter() < b.getDiameter())
+//        return -1;
+//      else if (a.getDiameter() > b.getDiameter())
+//        return 1;
+//      else
+//        return a.getName().compareTo(b.getName());
+//    }
+//  }
 
   public static void main(String[] args) {
     PrintSortedPlanetsAnonymous p = new PrintSortedPlanetsAnonymous();

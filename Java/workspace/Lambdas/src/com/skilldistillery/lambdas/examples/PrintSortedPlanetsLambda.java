@@ -1,6 +1,7 @@
 package com.skilldistillery.lambdas.examples;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class PrintSortedPlanetsLambda {
@@ -16,6 +17,10 @@ public class PrintSortedPlanetsLambda {
       }
     });
     */
+    
+    Comparator<Planet> cPlanet = (Planet a, Planet b) -> {
+    		return a.getOrbit() > b.getOrbit() ? 1 : -1;
+    };
     
     // Passing lambda
     Collections.sort(planets,

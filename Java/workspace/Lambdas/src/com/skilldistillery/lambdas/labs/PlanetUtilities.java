@@ -19,13 +19,28 @@ public class PlanetUtilities {
   }
 
   public static List<Planet> filterPlanets(List<Planet> list, Predicate<Planet> ps) {
-    List<Planet> tempList = new ArrayList<>();
+    List<Planet> tempList = new ArrayList<>(list);
+//    Predicate<String> startsWithComment = p -> p.trim().startsWith("//");
+//    boolean removed = strings.removeIf(startsWithComment);
+    boolean removed = tempList.removeIf(ps.negate());
+    System.out.println(removed);
     for (Planet planet : list) {
-      // Use the Predicate<Planet> implementation
-      if (ps.test(planet)) {
-        tempList.add(planet);
-      }
+      System.out.println(planet);
     }
+    System.out.println(tempList.toString());
     return tempList;
+  }
+  public static List<Planet> filterPlanets(List<Planet> list, Predicate<Planet> pa, Predicate<Planet> py) {
+	  List<Planet> tempList = new ArrayList<>(list);
+	  System.out.println(tempList);
+//    Predicate<String> startsWithComment = p -> p.trim().startsWith("//");
+//    boolean removed = strings.removeIf(startsWithComment);
+	  boolean removedA = tempList.removeIf(pa);
+	  boolean removedY = tempList.removeIf(py);
+	  System.out.println("A's removed: " + removedA);
+	  System.out.println("Y's removed: " + removedY);
+	  
+	  System.out.println(tempList.toString());
+	  return tempList;
   }
 }

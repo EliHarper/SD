@@ -1,7 +1,9 @@
 package com.skilldistillery.lambdas.drills;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class PlanetUtilities {
   public static List<Planet> getPlanets() {
@@ -15,5 +17,16 @@ public class PlanetUtilities {
         new Planet("Uranus", 2_870_990_000L, 51_118),
         new Planet("Neptune", 4_504_000_000L, 49_532));
   }
+  
+  public static List<Planet> filterPlanets(List<Planet> list, Predicate <Planet> p) {
+	  List<Planet> tempList = new ArrayList<>();
+	  for (Planet planet : list) {
+	    // Use the PlanetTester implementation
+		  if (p.test(planet)) {
+			list.add(planet);
+		}
+	  }
+	  return tempList;
+	}
 
 }

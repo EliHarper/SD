@@ -33,9 +33,11 @@ public class LambdaTranslation {
     Collections.shuffle(ints);
     
     // 1. Create a lambda with the functionality of reverseComparator
-    Comparator<Integer> reverseComparatorLambda = null;
+    Comparator<Integer> reverseComparatorLambda = (Integer o1, Integer o2) -> {
+    		return o2.compareTo(o1);
+    };
     // 2. Call printInts, passing the List and your lambda
-    
+    printInts(ints, reverseComparatorLambda);
     /*
      public interface IntegerChecker {
         boolean test(Integer i);
@@ -52,8 +54,14 @@ public class LambdaTranslation {
     System.out.println("12 is divisible by 3: " + isDivisibleBy3Checker.test(12));
     
     // 3. Create a lambda for isDivisibleBy3Predicate
-    IntegerChecker isDivBy3Lambda = null;
+    IntegerChecker isDivBy3Lambda = (Integer t) ->{
+    		return t % 3 == 0;
+    };
     
     // 4. Print the results of isDivBy3Lambda.test(376) and isDivBy3Lambda.test(144);
+    System.out.println("376 is divisible by 3: " + isDivisibleBy3Checker.test(376));
+    System.out.println("144 is divisible by 3: " + isDivisibleBy3Checker.test(144));
+    
+    
   }
 }

@@ -21,21 +21,21 @@ public class LambdaShortening {
     };
     
     // Replace null with a shortened lambda for c1
-    Comparator<Planet> c2 = null;
+    Comparator<Planet> c2 = (p1, p2) -> p1.getOrbit() > p2.getOrbit() ? 1 : -1;
     
     // -----------------------
     Function<Planet, Double> diameterInMiles = (Planet p) -> {
       return p.getDiameter() * 0.621371;
     };
     
-    Function<Planet, Double> diam2 = null;
+    Function<Planet, Double> diam2 = p -> p.getDiameter() * 0.621371;
     
     // -----------------------
     Runnable r = () -> {
       LocalDateTime ldt = LocalDateTime.now();
       System.out.println("Starting at " + ldt);
     };
-    Runnable r2 = null;
+    Runnable r2 = () -> System.out.println("Starting at " + LocalDateTime.now());
     
     // ----------------------
     /*
@@ -47,7 +47,7 @@ public class LambdaShortening {
       return p.getDiameter() > 40_000;
     };
     
-    PlanetTester pt2 = null;
+    PlanetTester pt2 = p -> p.getDiameter() > 40000;
     
     // ----------------------
     /*
@@ -59,7 +59,7 @@ public class LambdaShortening {
       return p.getDiameter() < 40_000;
     };
     
-    PlanetTester predPlan2 = null;
+    Predicate<Planet> predPlan2 = p -> p.getDiameter() < 40000;
   }
 
 }
